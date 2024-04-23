@@ -1,0 +1,22 @@
+<h1 class="title">Produkte</h1>
+
+<div class="products">
+  <div *ngFor="let product of products | async; let i = index">
+    <div
+      *ngIf="
+        searchValue === '' ||
+        product.produktname.toLowerCase().includes(searchValue) ||
+        product.produktbeschreibung.toLowerCase().includes(searchValue)
+      "
+    >
+      <app-product
+        id="{{product.produktID}}"
+        image="{{ product.bild }}"
+        title="{{ product.produktname }}"
+        description="{{ product.produktbeschreibung }}"
+        price="{{ product.preis }}"
+        class="product"
+      ></app-product>
+    </div>
+  </div>
+</div>

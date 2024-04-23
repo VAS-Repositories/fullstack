@@ -1,0 +1,38 @@
+mat-sidenav {
+    background-color: rgb(63, 81, 181, 0.1);
+    width: 25vw;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.productsInCart {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 20% 50% 20%;
+    grid-template-rows: auto;
+    button {
+        width: 20px;
+        height: 20px;
+        padding: 0;
+   }
+   .productNameInCart {
+        padding-left: 15px;
+    }
+    .priceInCart {
+        text-align: end;
+    }
+    .quantityButtonsInCart {
+        justify-self: center;
+    }
+}
+
+mat-sidenav-content {
+    min-height: 90vh;   // Restliche 10vh hat der Header
+}
+
+.bestellButton {
+    width: 100%;
+}
